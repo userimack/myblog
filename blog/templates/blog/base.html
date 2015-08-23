@@ -1,0 +1,70 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Mack's blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static "css/blog.css" %}">
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+    </head>
+    <body>
+        
+        <div class="page-header">
+            <h1><a href="/">Mack's Blog</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+         </div>
+
+
+        <!--
+        <div class="page-header">
+            <h1><a href="">Mack's Blog</a></h1>
+        </div>
+
+        <div>
+
+        <div class="content container">
+        <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        {{ post.published_date }}
+                    </div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaks }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+        </div>
+
+        {%for post in posts%}
+            <div class="post">
+            <p>published: {{post.published_date }} </p>
+            <h1><a href="">{{post.title}}</a></h1>
+            <p>{{post.text|linebreaks }}</p>
+            </div>
+        {%endfor%}
+        
+            <p>published: 15.08.2015, 12:14</p>
+            <h2><a href="">My first post</a></h2>
+            <p>Dgplug training in which we were told to make our own blogs.</p>
+        </div>
+
+        <div>
+            <p>published: 14.08.2015, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Many short courses to do.</p>
+        </div> -->
+    </body>
+</html>
