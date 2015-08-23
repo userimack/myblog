@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Mack's blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Mack's Blog</a></h1>
+        </div>
+
+        <div>
+        {%for post in posts%}
+            <div>
+            <p>published: {{post.published_date }} </p>
+            <h1><a href="">{{post.title}}</a></h1>
+            <p>{{post.text|linebreaks }}</p>
+            </div>
+        {%endfor%}
+        <!--
+            <p>published: 15.08.2015, 12:14</p>
+            <h2><a href="">My first post</a></h2>
+            <p>Dgplug training in which we were told to make our own blogs.</p>
+        </div>
+
+        <div>
+            <p>published: 14.08.2015, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Many short courses to do.</p>
+        </div> -->
+    </body>
+</html>
