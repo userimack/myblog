@@ -42,15 +42,12 @@ INSTALLED_APPS = (
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.linkedin',
-    'allauth.socialaccount.providers.linkedin_oauth2',
-    #'allauth.socialaccount.providers.openid',
+    #'allauth.socialaccount.providers.linkedin_oauth2',    
     'allauth.socialaccount.providers.github',
-    #'allauth.socialaccount.providers.bitbucket',
-    #'allauth.socialaccount.providers.stackexchange',
+    
     'django.contrib.admindocs',
     
  )
@@ -94,11 +91,33 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_EMAIL_VERIFICATION = "none"
+#########################
+# AllAuth Configuration #
+#########################
+
+ACCOUNT_AUTHENTICATION_METHOD = ("email")
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = True
+
 SOCIALACCOUNT_QUERY_EMAIL = True
 LOGIN_REDIRECT_URL = "/"
+LOGOUT_URL = '/'
 
+EMAIL_CONFIRMATION_SIGNUP = True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+
+ACCOUNT_LOGOUT_ON_GET =False
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+SOCIALACCOUNT_QUERY_EMAIL = (ACCOUNT_EMAIL_REQUIRED)
+SOCIALACCOUNT_AUTO_SIGNUP = True
+# SOCIALACCOUNT_AVATAR_SUPPORT = ( 'avatar' in INSTALLED_APPS)
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mahendrarao741@gmail.com'
+EMAIL_HOST_PASSWORD = 'rajkumar_rao'
+EMAIL_PORT = 587
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 WSGI_APPLICATION = 'myblog.wsgi.application'
 
@@ -131,5 +150,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# STATICFILES_DIRS = (
+#         os.path.join(BASE_DIR, 'static'),
+#     )
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

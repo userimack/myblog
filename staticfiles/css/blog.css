@@ -4,21 +4,26 @@ h1 a {
 }
 body {
     padding-left: 15px;
+    background-image: url("../image/bg.png");
+    background-repeat: repeat;
 }
 .page-header {
     background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    
+    width: 100%;
+    float:left;
+    
+    padding: 20px 20px 20px 40px; 
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #F2ECD8;
     font-size: 36pt;
     text-decoration: none;
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 180px;
 }
 
 h1, h2, h3, h4 {
@@ -47,8 +52,14 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    border: 2px solid black;
+    padding: 20px 20px 20px 40px;
 }
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
 }

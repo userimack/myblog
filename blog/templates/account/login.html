@@ -1,0 +1,73 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+{% load account socialaccount %}
+
+ {% block head_title %}  {% trans "Sign In" %} {%endblock%}   
+  
+
+{% block body %}
+
+{% block content %} 
+
+<div class="lb-header ">
+      <a href="/accounts/login/" class="active" id="login-box-link">Login</a>
+      <a href="/accounts/signup/" id="signup-box-link">Sign Up</a> 
+     </div>
+   
+    <div class="social-login">
+     
+     <a href="/accounts/github/login" class="github">
+        <i class="fa fa-github fa-lg"></i>
+        log in with GitHub
+      </a>
+   
+
+      <a href="/accounts/google/login/" class="google">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+
+      
+      <a href="/accounts/linkedin/login" class="linkedin">
+        <i class="fa fa-linkedin fa-lg"></i>
+        log in with LinkedIn
+      </a>
+
+      <a href="/accounts/twitter/login" class="twitter">
+        <i class="fa fa-twitter fa-lg"></i>
+        log in with Twitter
+      </a>
+      
+    </div>
+    
+<form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                <div class="u-form-group">
+                {{ form.as_p }}
+           
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                     </div>
+             <!--   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>-->
+             <div class="u-form-group">
+               <button class="primaryAction" type="submit" >{% trans "Log In" %}</button> 
+               </div>
+              </form>
+
+
+      <!-- <div class="u-form-group">
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div> -->
+    </form>
+</div>
+{%endblock%}
+
+{%endblock%}
+
+
+
+{% block javascript %} 
+    
+
+{%endblock%}

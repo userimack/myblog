@@ -1,0 +1,155 @@
+{% load staticfiles %}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+               /* background: url("{% static 'img/bg.png' %}");*/
+            }
+        </style>
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand hlogo " href="/"><strong>Blog</strong></a>
+        </div>
+        
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+
+
+<!-- {%  load staticfiles  %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+<!DOCTYPE html>
+<html>
+<head>    
+    
+    <title>{% block head_title %}{% endblock %}</title>
+-->
+ <!-- Bootstrap core CSS -->
+  <!-- <link href="{% static "css/bootstrap.css" %}" rel="stylesheet"> 
+   
+<link rel="stylesheet" type="text/css" href='/static/css/style.css'/> -->
+ <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}"/>   
+
+  
+    {% block head_css %}{% endblock %}
+    
+</head>
+<body>
+<div class="login-box shadow_box_head">
+
+    
+
+ {% block body %}
+
+{% block content %}
+
+  {% endblock %}
+  {% endblock %}
+
+  
+  <!--  <form class="email-signup">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Sign Up</button>
+      </div>
+    </form>-->
+  </div>
+
+<!--
+<div class="body"></div>
+    <div class="grad"></div>
+    <br>
+          <div class="login">
+             <div>
+                  <h1>{% trans "Sign In" %}</h1>
+
+-->
+                  
+                  <!--
+                  {% get_providers as socialaccount_providers %}
+
+                  {% if socialaccount_providers %}
+                        <p>{% blocktrans with site.name as site_name %}Please sign in with one of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                        for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+                      <div class="socialaccount_ballot">
+
+                          <ul class="socialaccount_providers">
+                              {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                          </ul>
+
+                           <div class="login-or">{% trans 'or' %}</div>
+
+                      </div>
+
+                          {% include "socialaccount/snippets/login_extra.html" %}
+
+                          {% else %}
+                          <p>{% blocktrans %}If you have not created an account yet, then please
+                          <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                      {% endif %}
+                      
+              </div> 
+             
+            -->
+
+</div>
+     
+
+
+<script src='/static/js/jquery-2.1.1.min.js'></script>
+    <script src='/static/js/index.js'></script>
+{% block javascript %}{% endblock %}
+
+
+</body>
+</html>
+
+
+
+
+
+
+

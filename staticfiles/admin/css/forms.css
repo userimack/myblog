@@ -93,7 +93,6 @@ form .aligned table p {
 }
 
 form .aligned p.help {
-    clear: left;
     padding-left: 38px;
 }
 

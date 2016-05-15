@@ -1,0 +1,45 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.sbtn{
+    margin-top: 15px;
+}
+
+.hlogo{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+.date {
+    padding-left: 10px; 
+    float: right;
+    color: #828282;
+}
+
+.editbtn{
+    float: right;
+    color: #828282;
+    padding:0px 10px;
+
+}
+.postlist{
+    margin-top: 40px;
+}
+
+.shadow_box{
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+}
+
+
+.shadow_box_head{
+    box-shadow: 0px 1px 4px 0px #000000;
+}
+
+
+
+
+
